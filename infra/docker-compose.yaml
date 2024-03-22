@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  streamlit:
+  DataScience:
     build:
       context: ../
       dockerfile: infra/Dockerfile
