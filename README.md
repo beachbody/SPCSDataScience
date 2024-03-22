@@ -71,7 +71,7 @@ execute_sql_file(
 )
 ```
 
-![SetUp Creates](../DataScience/files/images/00_setup.png)
+![SetUp Creates](./DataScience/files/images/00_setup.png)
 
 We want to make sure out image repository was created so we will run the
 following command
@@ -137,14 +137,14 @@ process that can be viewed inside of the infra/ folder
 
 #### Pictures of Steps
 
-![Make build](../DataScience/files/images/make_build_local.png)
+![Make build](./DataScience/files/images/make_build_local.png)
 
-![Jupyterlab Initial](../DataScience/files/images/jupyterlab_1.png)
+![Jupyterlab Initial](./DataScience/files/images/jupyterlab_1.png)
 
-![Jupyterlab Logged In](../DataScience/files/images/jupyterlab_2.png)
+![Jupyterlab Logged In](./DataScience/files/images/jupyterlab_2.png)
 
 ![Jupyterlab Execute
-Imports](../DataScience/files/images/jupyterlab_3.png)
+Imports](./DataScience/files/images/jupyterlab_3.png)
 
 > **Note**: As SPCS will not allow your volumes to be respected in a two
 > way methodology we have observed that COPY statements in your
