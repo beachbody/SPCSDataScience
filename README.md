@@ -98,7 +98,7 @@ cells below to make your make file.
 ! cat ../modeling.yaml
 ```
 
-#### Move Newly Created Spec File (streamlit.yaml) to Stage @specs
+#### Move Newly Created Spec File (modeling.yaml) to Stage @specs
 
 ``` python
 stage_location = r'@specs'
@@ -349,7 +349,7 @@ into your browser and enjoy your modeling jupyter notebook.
 2.  This will open a login page for this demo it is
     - Usename: RandomEmployee
     - Password: Snowflake2024
-3.  Streamlit App Will Load and Your Application is ready to go
+3.  Development App Will Load and Your Application is ready to go
 
 # Snowflake Application Deployment
 
