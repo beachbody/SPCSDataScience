@@ -111,7 +111,7 @@ for result in put_results:
 display(pd.DataFrame(session.sql('ls @specs').collect()))
 ```
 
-#### Login Into Snowflake Image Repo and Push Docker Image
+### Docker Creation
 
 #### Run Docker Build Locally
 
@@ -166,7 +166,9 @@ Imports](./DataScience/files/images/jupyterlab_3.png)
 > You also need to make sure you are able to login in with snowql and
 > snow cli to be able to run the following commands
 
-#### Login, Create, Push To Snowflake
+#### Pushing Image To Snowflake
+
+> make all will –\> Login, Create, Push To Snowflake
 
 ``` python
 ! cd ../ &&  make all
