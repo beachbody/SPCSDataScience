@@ -1,11 +1,12 @@
 name: Deploy Snowpark CLI Execution
 
 on:
-  push:
-    branches:
-      - "*"
-    tags:
-      - "v*"
+  # Uncomment to enable on push
+  # push:
+  #   branches:
+  #     - "*"
+  #   tags:
+  #     - "v*"
   workflow_dispatch:
 
 jobs:
