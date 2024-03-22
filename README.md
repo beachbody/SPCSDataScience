@@ -82,31 +82,6 @@ display(pd.DataFrame(session.sql(f"SHOW IMAGE REPOSITORIES;").collect())[['creat
 pd.DataFrame(session.sql(f"SHOW IMAGE REPOSITORIES;").collect())[['repository_url']].values[0][0]
 ```
 
-<div>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-&#10;    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-&#10;    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-
-|     | created_on                       | name       | database_name     | schema_name | owner               | owner_role_type | comment                     | repository_url                                    |
-|-----|----------------------------------|------------|-------------------|-------------|---------------------|-----------------|-----------------------------|---------------------------------------------------|
-| 0   | 2024-03-22 09:25:57.664000-07:00 | IMAGE_REPO | CONTAINER_DEMO_DB | PUBLIC      | CONTAINER_USER_ROLE | ROLE            | This is for modeling useage | sfsenorthamerica-demo-jdemlow.registry.snowfla... |
-
-</div>
-
-</div>
-
-    'sfsenorthamerica-demo-jdemlow.registry.snowflakecomputing.com/container_demo_db/public/image_repo'
-
 ^^string above is going to be your repository that you will put into the
 cells below to make your make file.
 
@@ -138,31 +113,6 @@ for result in put_results:
     print(f"File: {result.source}, Status: {result.status}")
 display(pd.DataFrame(session.sql('ls @specs').collect()))
 ```
-
-    File: modeling.yaml, Status: UPLOADED
-
-<div>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-&#10;    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-&#10;    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-
-|     | name                | size | md5                              | last_modified                 |
-|-----|---------------------|------|----------------------------------|-------------------------------|
-| 0   | specs/modeling.yaml | 530  | a3d1e68a091ea60647950495bd022360 | Fri, 22 Mar 2024 18:44:44 GMT |
-
-</div>
-
-</div>
 
 #### Login Into Snowflake Image Repo and Push Docker Image
 
@@ -355,12 +305,6 @@ execute_sql_file(
 session.sql("SHOW SERVICES;").show()
 ```
 
-    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    |"name"                     |"database_name"    |"schema_name"  |"owner"              |"compute_pool"       |"dns_name"                                          |"min_instances"  |"max_instances"  |"auto_resume"  |"external_access_integrations"  |"created_on"                      |"updated_on"                      |"resumed_on"  |"comment"  |"owner_role_type"  |"query_warehouse"  |
-    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    |MODELING_SNOWPARK_SERVICE  |CONTAINER_DEMO_DB  |PUBLIC         |CONTAINER_USER_ROLE  |CONTAINER_DEMO_POOL  |modeling-snowpark-service.public.container-demo...  |1                |1                |true           |["ALLOW_ALL_EAI"]               |2024-03-22 11:51:08.455000-07:00  |2024-03-22 11:51:10.110000-07:00  |NULL          |NULL       |ROLE               |NULL               |
-    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 **Remember**: That this will take a few minutes of your service to be up
 and running so you will be able run the following command again and it
 will give you the url link that will allow you to log into your app with
@@ -376,31 +320,6 @@ display(temp)
 print(temp["ingress_url"].values[0])
 ```
 
-<div>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-&#10;    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-&#10;    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-
-|     | name     | port | protocol | ingress_enabled | ingress_url                                       |
-|-----|----------|------|----------|-----------------|---------------------------------------------------|
-| 0   | modeling | 8080 | HTTP     | true            | bg54b6i-sfsenorthamerica-demo-jdemlow.snowflak... |
-
-</div>
-
-</div>
-
-    bg54b6i-sfsenorthamerica-demo-jdemlow.snowflakecomputing.app
-
 Assuming ingest_url contains the URL you want to copy and paste this URL
 into your browser and enjoy your modeling jupyter notebook.
 
@@ -410,15 +329,51 @@ into your browser and enjoy your modeling jupyter notebook.
     - Password: Snowflake2024
 3.  Streamlit App Will Load and Your Application is ready to go
 
-# Snowflake App Deployed
+# Snowflake Application Deployment
 
-Now that we have the docker image deployed and in a ready state we are
-now ready to go in and see what we have created.
+## Overview
+
+This guide will walk you through the process of deploying a Snowflake
+application, cloning a repository, setting up GitHub secrets, triggering
+a GitHub Actions workflow, and exploring the resulting models and
+predictions stored in Snowflake.
+
+### Prerequisites
+
+Before you begin, ensure that you have the following: - Docker installed
+and configured on your local machine - A GitHub account with a
+repository set up for your project - Access to a Snowflake instance with
+the necessary permissions
+
+## Getting Started
+
+With the Docker image now deployed and ready, we are poised to explore
+the capabilities of our newly created application. Navigate to a website
+with a URL ending in `.snowflakecomputing.app` to begin.
 
 ![Open Application](./DataScience/files/images/openapp.png)
 
+Upon reaching the site, log in using the credentials for
+“RandomEmployee”. This process grants access to your development
+ecosystem.
+
+> **Warning**: Allow 5-10 minutes for the application to become fully
+> operational. Initial errors can often be resolved by refreshing the
+> page or attempting to log in again after a brief wait.
+
+The next step involves using a secure token found within your Docker
+Image. If unchanged, the default token “my_secure_token” enhances
+application security, although its use is optional.
+
 ![First Screen Add
 Token](./DataScience/files/images/login_first_page.png)
+
+Post-login, you may notice the development ecosystem appears empty. This
+is due to the absence of a cloned repository. Although it may seem
+unconventional, cloning a repo into the development application
+addresses a known product gap, set for future resolution. Additionally,
+integration with Git in PrPr is forthcoming, offering a more streamlined
+experience with repositories.
 
 ![Open Terminal as Jupyter Lab Is
 Empty](./DataScience/files/images/open_terminal.png)
@@ -426,26 +381,112 @@ Empty](./DataScience/files/images/open_terminal.png)
 ![Clone Repo to Jupyter Lab
 Session](./DataScience/files/images/clone_repo.png)
 
-![Add Github Secerts](./DataScience/files/images/add_secerts.png)
+Having cloned your repository, feel free to start development. Remember
+to push changes back to your Git repository to remain updated with the
+latest revisions. Your code is safely stored in a designated volume,
+accessible via `ls @volumes/jupyter-nbs/` in Snowflake, complying with
+specified requirements.
 
-![Go to Repo Actions](./DataScience/files/images/github_action.png)
+## GitHub Integration
 
-![Trigger Workflow](./DataScience/files/images/run_github_action.png)
+To integrate your project with GitHub and enable automated workflows,
+follow these steps:
+
+1.  **Set up GitHub Secrets**: Ensure your GitHub repository contains
+    the necessary secrets for authentication and access to your
+    Snowflake instance. The setup should resemble the image below.
+
+    ![Add GitHub Secrets](./DataScience/files/images/add_secerts.png)
+
+    Refer to the [GitHub Secrets
+    documentation](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
+    for detailed instructions on how to create and manage secrets for
+    your repository.
+
+2.  **Configure GitHub Actions**: With GitHub secrets in place, navigate
+    to your repository’s GitHub Actions to trigger the workflow.
+
+    ![Go to Repo Actions](./DataScience/files/images/github_action.png)
+
+3.  **Trigger the Workflow**: Manually trigger the workflow by selecting
+    the appropriate action and providing any necessary inputs.
+
+    ![Trigger
+    Workflow](./DataScience/files/images/run_github_action.png)
+
+    Successfully triggering the workflow culminates in the construction
+    of a RandomForestRegressor. This model, once trained, is utilized
+    for predictions, subsequently recorded back into Snowflake. Future
+    tutorials will delve into more sophisticated workflows, enhancing
+    your data science projects within Snowflake.
+
+> **Caution**: This tutorial does not encompass the entirety of a data
+> science project’s requirements. It serves as an introductory guide,
+> with plans to expand on Snowflake’s native ML capabilities, Cortex,
+> and other projects. Stay tuned for updates and explore different
+> branches for additional developments.
+
+## Exploring Results
+
+After workflow completion, delve into the notebooks for insights and
+outcomes verification.
 
 ![Click into job_nbs](./DataScience/files/images/click_jobs_nbs.png)
 
 ![Click into
 RanJobs](./DataScience/files/images/jobs_ran_from_github.png)
 
-![Result of Github
+![Result of GitHub
 Actions](./DataScience/files/images/result_of_action.png)
 
-![Explore Inference Notebooke
+Reviewing these notebooks aids in debugging and ensures everything
+performed as expected.
+
+![Explore Inference Notebook
 Run](./DataScience/files/images/look_at_ran_nbs.png)
+
+For continued exploration, re-triggering the notebook facilitates
+additional predictions, exemplifying how automation, such as cron jobs
+in GitHub, can enhance your workflow.
 
 ![Run Action Again](./DataScience/files/images/run_again.png)
 
+Finally, view the prediction outcomes within your Snowflake database.
+
 ![Snowflake Database](./DataScience/files/images/final_result.png)
+
+## Troubleshooting
+
+If you encounter any issues during the deployment process, here are some
+common troubleshooting steps:
+
+1.  **Login Issues**: If you’re unable to log in, ensure that you’re
+    using the correct credentials and that the application has had
+    sufficient time to become operational.
+2.  **GitHub Secrets**: Double-check that your GitHub secrets are set up
+    correctly and that the required permissions are in place.
+3.  **Workflow Errors**: Review the output from the GitHub Actions
+    workflow for any error messages or clues about what might be causing
+    the issue.
+4.  **Snowflake Connectivity**: Verify that your Snowflake instance is
+    accessible and that you have the necessary permissions to interact
+    with it.
+
+If the issue persists, feel free to reach out to the support team for
+further assistance.
+
+## Additional Resources
+
+For more advanced topics, code examples, and updates, please refer to
+the following resources:
+
+- [Snowflake Documentation](https://docs.snowflake.com/)
+- [Snowflake GitHub Repository](https://github.com/snowflakedb)
+- [Snowflake Community](https://community.snowflake.com/)
+- [GitHub Actions Documentation](https://docs.github.com/en/actions)
+
+We encourage you to provide feedback on this documentation by submitting
+issues or pull requests.
 
 # Clean Up
 
