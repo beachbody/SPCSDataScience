@@ -116,24 +116,34 @@ display(pd.DataFrame(session.sql('ls @specs').collect()))
 
 #### Login Into Snowflake Image Repo and Push Docker Image
 
-#### Run Locally Ensure
+#### Run Docker Build Locally
 
-You need to test this locally designed to allow you to have a better
-understanding `make build_local; make run` and make sure it’s working as
-you would expect it then move on to the next steps. 1. Download docker
-desktop and ensure it is open and running. - \> **Warning**: Make sure
-you have docker running and make sure you have logged in already
-`~/.docker/config.json` you can check this or run docker login in the
-terminal - \> **Also make sure you make your .env file in infra** for
-your enviornment vairiables to be used in your docker-compose.yaml. As
-you grow out of this tutorial mode the next step here would be to create
-github actions to create these approaches so that you are able to run
-this in a more devops style approach. In future versions this will be
-shown. 2. Open Terminal navigate to this repo and run
-`make build_local` - If you are using VS code you can simple click
-terminal and paste the command 3. After your local build is complete you
-can then run `make run`. - This is going to be running a docker compose
-process that can be viewed inside of the infra/ folder
+> We want you to test this locally by designed to allow you to have a
+> better understanding `make build_local; make run` and make sure it’s
+> working as you would expect it then move on to the next steps.
+
+1.  Download docker desktop and ensure it is open and running.
+
+    - **Warning**: Make sure you have docker running and make sure you
+      > have logged in already `~/.docker/config.json` you can check
+      > this or run docker login in the terminal
+
+    - **Also make sure you make your .env file in infra** for your
+      > enviornment vairiables to be used in your docker-compose.yaml.
+      > As you grow out of this tutorial mode the next step here would
+      > be to create github actions to create these approaches so that
+      > you are able to run this in a more devops style approach. In
+      > future versions this will be shown.
+
+2.  Open Terminal navigate to this repo and run `make build_local`
+
+    - If you are using VS code you can simple click terminal and paste
+      the command
+
+3.  After your local build is complete you can then run `make run`.
+
+    - This is going to be running a docker compose process that can be
+      viewed inside of the infra/ folder
 
 #### Pictures of Steps
 
