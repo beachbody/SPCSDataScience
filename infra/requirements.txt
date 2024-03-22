@@ -1,0 +1,8 @@
+streamlit
+pyarrow==10.0.1
+snowflake-snowpark-python
+notebook
+jupyterlab
+scikit-learn
+scikit-learn-intelex 
+pandas
