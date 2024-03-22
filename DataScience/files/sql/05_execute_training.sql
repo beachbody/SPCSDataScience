@@ -7,7 +7,7 @@ spec:
       image: sfsenorthamerica-demo-jdemlow.registry.snowflakecomputing.com/container_demo_db/public/image_repo/modeling
       env:
         SNOWFLAKE_WAREHOUSE: CONTAINER_DEMO_WH
-        NOTEBOOK_FILE: "StreamlitExample/job_nbs/99a_train_randomforest.ipynb"
+        NOTEBOOK_FILE: "SPCSDataScience/job_nbs/99a_train_randomforest.ipynb"
         FILE_NAME: train_randomforest
       command:
         - "/bin/bash"
