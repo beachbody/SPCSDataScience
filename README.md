@@ -225,10 +225,10 @@ execute_sql_file(
 >
 > # Snowflake Configuration for Enhanced Security and Services
 >
-> This updated documentation guides you through the process of
-> configuring Snowflake for enhanced security measures and service
-> creation, specifically tailored for modeling and development purposes
-> within containerized environments.
+> This documentation guides you through the process of configuring
+> Snowflake for enhanced security measures and service creation,
+> specifically tailored for modeling and development purposes within
+> containerized environments.
 >
 > ## Step 1: Create Security Integration for OAuth
 >
