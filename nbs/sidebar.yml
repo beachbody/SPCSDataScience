@@ -3,3 +3,4 @@ website:
     contents:
       - index.ipynb
       - 00_Connection.ipynb
+      - copy_index.ipynb

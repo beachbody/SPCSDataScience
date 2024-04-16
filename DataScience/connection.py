@@ -90,6 +90,7 @@ def create_snowflake_session(creds: dict = None, creds_file_path: str = None, **
             'schema': kwargs.get("schema") or os.getenv('SNOWFLAKE_SCHEMA'),
             'client_session_keep_alive': True
         }
+
         # Check for missing or empty session configurations
         for key in ['account', 'user', 'password', 'role', 'warehouse', 'database', 'schema']:
             if key not in session_config or not session_config[key]:
@@ -148,4 +149,4 @@ def execute_sql_file(session: Session, file_path: str):
                 logging.info("Successfully executed")
         except Exception as e:
             logging.info(f"Error executing command: {command}\nError: {e}")
-    
+
