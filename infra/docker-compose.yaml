@@ -17,5 +17,3 @@ services:
       - SNOWFLAKE_WAREHOUSE=${SNOWFLAKE_WAREHOUSE}
     volumes:
       - ../.:/home/jupyter/SPCSDataScience
-      # - ../nbs:/home/jupyter/nbs
-      # - ../SPCSDataScience:/home/jupyter/SPCSDataScience

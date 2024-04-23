@@ -19,7 +19,7 @@ While you may prefer different development tools, this initial setup is
 optimized for Jupyter Lab but is adaptable to accommodate R Studio,
 Scala, or any other environment that suits your development style.
 
-## Create Local Conda Environment
+## Create Local Conda EnvironmXent
 
 > **Warning**: You must have Conda installed on your computer already
 > before you can proceed with this process.

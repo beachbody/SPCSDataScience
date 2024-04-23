@@ -1,3 +1,5 @@
+# Built before this was released so keeping this for now until I update the action
+# https://github.com/Snowflake-Labs/snowflake-cli-action
 name: Deploy Snowpark CLI Execution
 
 on:
