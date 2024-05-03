@@ -2,5 +2,10 @@ website:
   sidebar:
     contents:
       - index.ipynb
-      - 00_Connection.ipynb
-      - copy_index.ipynb
+      - section: Tutorials
+        contents:
+        - jupyterlab_spcs.ipynb
+        
+      - section: Library Functions
+        contents:
+          - 00_Connection.ipynb
