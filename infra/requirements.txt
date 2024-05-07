@@ -6,3 +6,6 @@ jupyterlab
 scikit-learn
 scikit-learn-intelex 
 pandas
+matplotlib
+seaborn
+snowflake-ml-python
