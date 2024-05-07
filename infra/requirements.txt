@@ -4,8 +4,9 @@ snowflake-snowpark-python
 notebook
 jupyterlab
 scikit-learn
-scikit-learn-intelex 
+scikit-learn-intelex
 pandas
 matplotlib
 seaborn
+# Optional install for doing snowflake nb snowpark this will take work to get the docker image to work
 snowflake-ml-python
