@@ -1,9 +1,0 @@
-project:
-  output-dir: _docs
-
-website:
-  title: "SPCSDataScience"
-  site-url: "https://sfc-gh-jdemlow.github.io/SPCSDataScience"
-  description: "Snowpark Container Service With Streamlit"
-  repo-branch: main
-  repo-url: "https://github.com/sfc-gh-jdemlow/SPCSDataScience"
