@@ -22,6 +22,8 @@ workflows.
   [Link](https://medium.com/@jeremy.demlow_35029/part-1-kickstarting-data-science-with-snowpark-container-services-fd36e0016f42)
 - **GitHub Page**:
   [Link](https://sfc-gh-jdemlow.github.io/SPCSDataScience/jupyterlab_spcs.html)
+- **Github Repository**:
+  [Link](https://github.com/sfc-gh-jdemlow/SPCSDataScience)
 
 <https://youtu.be/FaLgQCbQWjA?si=UCvwGO5U7wCo9_uU>
 
