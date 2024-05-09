@@ -5,7 +5,3 @@ website:
       - section: Tutorials
         contents:
         - jupyterlab_spcs.ipynb
-        
-      # - section: Library Functions
-      #   contents:
-      #     - 00_Connection.ipynb
