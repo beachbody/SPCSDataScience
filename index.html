@@ -144,8 +144,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#part-1-data-science-workload-in-snowflake-with-spcs" id="toc-part-1-data-science-workload-in-snowflake-with-spcs" class="nav-link active" data-scroll-target="#part-1-data-science-workload-in-snowflake-with-spcs">Part 1: Data Science Workload in Snowflake with SPCS</a></li>
+  <li><a href="#spcs-data-science-series" id="toc-spcs-data-science-series" class="nav-link active" data-scroll-target="#spcs-data-science-series">SPCS Data Science Series**</a></li>
+  <li><a href="#part-1-data-science-workload-in-snowflake-with-spcs" id="toc-part-1-data-science-workload-in-snowflake-with-spcs" class="nav-link" data-scroll-target="#part-1-data-science-workload-in-snowflake-with-spcs">Part 1: Data Science Workload in Snowflake with SPCS</a></li>
   <li><a href="#future-work" id="toc-future-work" class="nav-link" data-scroll-target="#future-work">Future Work</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sfc-gh-jdemlow/SPCSDataScience/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -177,40 +179,41 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This repository is a series that will continue to evlove and find ways to use SPCS to make our lives easier as Data Scientist and Machine Learning Engineers. In this series we will be growing the snowflake native capabilities along side of SPCS to create a template to go in any direction that you are looking to be able to do.</p>
-<p>After you set up your work enviornment in snowflake the next steps are to build out the data science workflow you are going to go with. As this series develops</p>
+<section id="spcs-data-science-series" class="level2">
+<h2 class="anchored" data-anchor-id="spcs-data-science-series">SPCS Data Science Series**</h2>
+<p>This repository is part of a series that will continue to evolve, finding ways to leverage SPCS to make our lives easier as data scientists and machine learning engineers. We’ll be enhancing Snowflake’s native capabilities alongside SPCS to create templates adaptable to any direction. After setting up your work environment in Snowflake, the next steps involve building the desired data science workflow. As the series develops, we’ll explore and refine these workflows.</p>
+</section>
 <section id="part-1-data-science-workload-in-snowflake-with-spcs" class="level2">
 <h2 class="anchored" data-anchor-id="part-1-data-science-workload-in-snowflake-with-spcs">Part 1: Data Science Workload in Snowflake with SPCS</h2>
-<p>Youtube Walk Through: <a href="https://www.youtube.com/watch?v=FaLgQCbQWjA&amp;t">Link</a></p>
+<ul>
+<li><strong>YouTube Walkthrough</strong>: <a href="https://www.youtube.com/watch?v=FaLgQCbQWjA&amp;t">Video</a></li>
+<li><strong>Medium Article</strong>: <a href="#">Link</a></li>
+<li><strong>GitHub Page</strong>: <a href="#">Link</a></li>
+</ul>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/FaLgQCbQWjA?si=UCvwGO5U7wCo9_uU" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>Medium Article: <a href="">Link</a></p>
-<p>Github Page: <a href="">Link</a></p>
 </section>
 <section id="future-work" class="level2">
 <h2 class="anchored" data-anchor-id="future-work">Future Work</h2>
 <ol type="1">
-<li><p>Data Ingestion</p>
+<li><p><strong>Data Ingestion</strong><br>
+<a href="https://github.com/Snowflake-Labs/sfguide-data-engineering-with-snowpark-python/tree/main">Data Ingestion Snowpark - Great Article</a>. Ideally, this repo eventually becomes something similar, providing comprehensive data ingestion and MLOps capabilities.</p></li>
+<li><p><strong>Feature Store &amp; Data Preprocessing</strong><br>
+Snowflake is working on a feature store that’s currently in preview. Once available, we’ll demonstrate its potential in project workflows.</p>
 <ul>
-<li><a href="https://github.com/Snowflake-Labs/sfguide-data-engineering-with-snowpark-python/tree/main">Data Ingestion Snowpark Great Article</a> ideally this repo eventually becomes somehting like this that allows for you to have all of the data ingestion and ml ops with it as well.</li>
+<li>We’ll discuss both offline and batch feature stores.</li>
+<li>Monitoring data drift is crucial to ensure that our data hasn’t drifted significantly, as this may require retraining models.</li>
 </ul></li>
-<li><p>Feature Store &amp; Data Preprocessing</p>
-<ul>
-<li>Yes, snowflake is coming out with a feature store that is in PrPr, but coming soon we will go over what this might look like and how you can work through a probject with a feature store.
-<ul>
-<li>Offline and batch feature stores will be</li>
-</ul></li>
-<li>Data drift is part of both of these wanting to make sure that our data has not drifted to much because if it has then it might be time to retrain your model as your model’s enviornment has changed and you will not be getting the most out of your model’s prediction.</li>
-</ul></li>
-<li><p>Model Training and Model Registering</p>
-<ul>
-<li>The goal here is to show the power of SPCS, Snowflake ML and Snowflake Cortext. As this is a work in progress this will take time to show all of these together, but the goal is to show how they can all work together as one.</li>
-</ul></li>
-<li><p>Model Inference</p>
-<ul>
-<li>Showing the options for model inference in snowflake.</li>
-</ul></li>
+<li><p><strong>Model Training and Model Registering</strong><br>
+Our goal is to highlight the power of SPCS, Snowflake ML, and Snowflake Cortex. We’ll demonstrate how these tools can integrate effectively.</p></li>
+<li><p><strong>Model Inference</strong><br>
+We will explore various options for model inference in Snowflake.</p></li>
 </ol>
-<p><a href="https://sfc-gh-jdemlow.github.io">Github Page</a> – Currently not working yet</p>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li><a href="https://sfc-gh-jdemlow.github.io/SPCSDataScience">GitHub Page</a></li>
+</ul>
 
 
 </section>

@@ -4,7 +4,17 @@
     "href": "index.html",
     "title": "Welcome to SPCSDataScience",
     "section": "",
-    "text": "This repository is a series that will continue to evlove and find ways to use SPCS to make our lives easier as Data Scientist and Machine Learning Engineers. In this series we will be growing the snowflake native capabilities along side of SPCS to create a template to go in any direction that you are looking to be able to do.\nAfter you set up your work enviornment in snowflake the next steps are to build out the data science workflow you are going to go with. As this series develops",
+    "text": "This repository is part of a series that will continue to evolve, finding ways to leverage SPCS to make our lives easier as data scientists and machine learning engineers. We’ll be enhancing Snowflake’s native capabilities alongside SPCS to create templates adaptable to any direction. After setting up your work environment in Snowflake, the next steps involve building the desired data science workflow. As the series develops, we’ll explore and refine these workflows.",
+    "crumbs": [
+      "Welcome to SPCSDataScience"
+    ]
+  },
+  {
+    "objectID": "index.html#spcs-data-science-series",
+    "href": "index.html#spcs-data-science-series",
+    "title": "Welcome to SPCSDataScience",
+    "section": "",
+    "text": "This repository is part of a series that will continue to evolve, finding ways to leverage SPCS to make our lives easier as data scientists and machine learning engineers. We’ll be enhancing Snowflake’s native capabilities alongside SPCS to create templates adaptable to any direction. After setting up your work environment in Snowflake, the next steps involve building the desired data science workflow. As the series develops, we’ll explore and refine these workflows.",
     "crumbs": [
       "Welcome to SPCSDataScience"
     ]
@@ -14,7 +24,7 @@
     "href": "index.html#part-1-data-science-workload-in-snowflake-with-spcs",
     "title": "Welcome to SPCSDataScience",
     "section": "Part 1: Data Science Workload in Snowflake with SPCS",
-    "text": "Part 1: Data Science Workload in Snowflake with SPCS\nYoutube Walk Through: Link\n\nMedium Article: Link\nGithub Page: Link",
+    "text": "Part 1: Data Science Workload in Snowflake with SPCS\n\nYouTube Walkthrough: Video\nMedium Article: Link\nGitHub Page: Link",
     "crumbs": [
       "Welcome to SPCSDataScience"
     ]
@@ -24,7 +34,17 @@
     "href": "index.html#future-work",
     "title": "Welcome to SPCSDataScience",
     "section": "Future Work",
-    "text": "Future Work\n\nData Ingestion\n\nData Ingestion Snowpark Great Article ideally this repo eventually becomes somehting like this that allows for you to have all of the data ingestion and ml ops with it as well.\n\nFeature Store & Data Preprocessing\n\nYes, snowflake is coming out with a feature store that is in PrPr, but coming soon we will go over what this might look like and how you can work through a probject with a feature store.\n\nOffline and batch feature stores will be\n\nData drift is part of both of these wanting to make sure that our data has not drifted to much because if it has then it might be time to retrain your model as your model’s enviornment has changed and you will not be getting the most out of your model’s prediction.\n\nModel Training and Model Registering\n\nThe goal here is to show the power of SPCS, Snowflake ML and Snowflake Cortext. As this is a work in progress this will take time to show all of these together, but the goal is to show how they can all work together as one.\n\nModel Inference\n\nShowing the options for model inference in snowflake.\n\n\nGithub Page – Currently not working yet",
+    "text": "Future Work\n\nData Ingestion\nData Ingestion Snowpark - Great Article. Ideally, this repo eventually becomes something similar, providing comprehensive data ingestion and MLOps capabilities.\nFeature Store & Data Preprocessing\nSnowflake is working on a feature store that’s currently in preview. Once available, we’ll demonstrate its potential in project workflows.\n\nWe’ll discuss both offline and batch feature stores.\nMonitoring data drift is crucial to ensure that our data hasn’t drifted significantly, as this may require retraining models.\n\nModel Training and Model Registering\nOur goal is to highlight the power of SPCS, Snowflake ML, and Snowflake Cortex. We’ll demonstrate how these tools can integrate effectively.\nModel Inference\nWe will explore various options for model inference in Snowflake.",
+    "crumbs": [
+      "Welcome to SPCSDataScience"
+    ]
+  },
+  {
+    "objectID": "index.html#resources",
+    "href": "index.html#resources",
+    "title": "Welcome to SPCSDataScience",
+    "section": "Resources",
+    "text": "Resources\n\nGitHub Page",
     "crumbs": [
       "Welcome to SPCSDataScience"
     ]
