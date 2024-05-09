@@ -154,3 +154,8 @@ checklink/cookies.txt
 copy_index.ipynb
 copy_dockerfile
 code_only.ipynb
+
+/.quarto/
+/_site/
+/_docs/
+/site_libs/
