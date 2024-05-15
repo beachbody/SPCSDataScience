@@ -27,6 +27,7 @@ build:  ## Build Docker image for Snowpark Container Services
 
 push_docker:  ## Push Docker image to Snowpark Container Services
 	echo "Pushing Docker image $(DOCKER_IMAGE) to $(SNOWFLAKE_REPO)"
+	docker build --platform linux/amd64 -f infra/Dockerfile -t $(DOCKER_IMAGE) .
 	docker tag $(DOCKER_IMAGE) $(SNOWFLAKE_REPO)/$(DOCKER_IMAGE)
 	docker push $(SNOWFLAKE_REPO)/$(DOCKER_IMAGE)
 
