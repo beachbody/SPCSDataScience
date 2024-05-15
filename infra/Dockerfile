@@ -58,4 +58,3 @@ ENV JUPYTER_PORT=8080
 WORKDIR /home/jupyter
 
 ENTRYPOINT ["/bin/bash", "-c", "jupyter lab --allow-root --ip=0.0.0.0 --port=${JUPYTER_PORT} --no-browser --NotebookApp.token=${JUPYTER_TOKEN}"]
-# ENTRYPOINT ["sh", "-c", "exec jupyter lab --allow-root --ip=0.0.0.0 --port=${JUPYTER_PORT} --no-browser --NotebookApp.token=${JUPYTER_TOKEN}"]

@@ -12,7 +12,7 @@ spec:
       command:
         - "/bin/bash"
         - "-c"
-        - "source /opt/venv/bin/activate && { datetime=$(date +'%Y%m%d_%H%M%S'); jupyter nbconvert --execute --inplace --allow-errors --ExecutePreprocessor.timeout=-1 --NotebookApp.token='${JUPYTER_TOKEN}' ${NOTEBOOK_FILE} --output=./RanJobs/${FILE_NAME}executed_${datetime}.ipynb; }"
+        - "{ datetime=$(date +'%Y%m%d_%H%M%S'); jupyter nbconvert --execute --inplace --allow-errors --ExecutePreprocessor.timeout=-1 --NotebookApp.token='${JUPYTER_TOKEN}' ${NOTEBOOK_FILE} --output=./RanJobs/${FILE_NAME}executed_${datetime}.ipynb; }"
       volumeMounts:
         - name: juypter-nbs
           mountPath: /home/jupyter
