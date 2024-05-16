@@ -17,11 +17,22 @@ RUN apt-get update --yes && \
     cmake \
     gcc && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Robynn Specific
+RUN apt-get update --fix-missing && apt-get install -y \
+    ca-certificates \
+    libglib2.0-0 \
+    libxext6 \
+    libsm6 \
+    libxrender1 \
+    libxml2-dev
+
     
 COPY ../. /tmp/SPCSDataScience
 RUN chown -R ${NB_UID}:${NB_GID} /tmp/SPCSDataScience && \
     chmod -R 755 /tmp/SPCSDataScience
 
+# Installing Robynn
 RUN mamba install --yes \
     'r-base' \
     'r-caret' \
@@ -47,6 +58,12 @@ RUN mamba install --yes \
     mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
+
+## copy files
+COPY .././infra/install_robyn.R /install_robyn.R
+
+## install packages
+RUN Rscript /install_robyn.R
 
 RUN pip install /tmp/SPCSDataScience
 

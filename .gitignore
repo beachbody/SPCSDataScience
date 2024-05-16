@@ -161,3 +161,4 @@ code_only.ipynb
 /site_libs/
 *spcs_api.ipynb
 *Dockerfile_old
+/docker/*
