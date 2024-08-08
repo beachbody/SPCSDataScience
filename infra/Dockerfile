@@ -69,7 +69,7 @@ RUN pip install /tmp/SPCSDataScience
 
 USER ${NB_UID}
 
-ENV JUPYTER_TOKEN="my_secure_token"
+ENV JUPYTER_TOKEN="YOUR_JUPYTER_TOKEN"
 ENV JUPYTER_PORT=8080
 
 WORKDIR /home/jupyter

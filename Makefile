@@ -1,4 +1,4 @@
-SNOWFLAKE_REPO?=sfsenorthamerica-demo-jdemlow.registry.snowflakecomputing.com/container_demo_db/public/image_repo
+SNOWFLAKE_REPO?=tbc-prod.registry.snowflakecomputing.com/container_demo_db/public/image_repo
 DOCKER_IMAGE=modeling:latest
 SNOWFLAKE_COMPUTE_POOL?=CONTAINER_DEMO_WH
 

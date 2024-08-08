@@ -1,7 +1,7 @@
 spec:
   containers:
     - name: modeling
-      image: sfsenorthamerica-demo-jdemlow.registry.snowflakecomputing.com/container_demo_db/public/image_repo/modeling
+      image: tbc-prod.registry.snowflakecomputing.com/container_demo_db/public/image_repo/modeling
       env:
         SNOWFLAKE_WAREHOUSE: CONTAINER_DEMO_WH
       volumeMounts:
